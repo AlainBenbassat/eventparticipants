@@ -1,0 +1,4 @@
+name = Event Participants
+description = Creates a public participant list (bemas.org/LANG/eventparticipants?id=CIVI_EVENT_ID)
+core = 7.x
+package = BEMAS

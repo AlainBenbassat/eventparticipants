@@ -45,12 +45,14 @@ function eventparticipants_page() {
   $html .= '<table>';
   $html .= '<tr>';
   $html .= '<th>' . $langString['initials'] . '</th>';
+  $html .= '<th>' . $langString['job_title'] . '</th>';
   $html .= '<th>' . $langString['organization'] . '</th>';
   $html .= '</tr>';
 
   while ($dao->fetch()) {
     $html .= '<tr>';
     $html .= '<td>' . substr($dao->first_name, 0, 1) . substr($dao->last_name, 0, 1) . '</td>';
+    $html .= '<td>' . $dao->job_title . '</td>';
     $html .= '<td>' . $dao->organization_name . '</td>';
     $html .= '</tr>';
   }
@@ -76,6 +78,7 @@ function eventparticipants_getEventParticipants($eventID) {
     select
       c.first_name,
       c.last_name,
+      c.job_title,
       c.organization_name
     from
       civicrm_contact c
@@ -122,6 +125,10 @@ function eventparticipants_getStrings() {
   $langStrings['nl_NL']['initials'] = 'Initialen';
   $langStrings['fr_FR']['initials'] = 'Initiales';
   $langStrings['en_US']['initials'] = 'Initials';
+
+  $langStrings['nl_NL']['job_title'] = 'Functie';
+  $langStrings['fr_FR']['job_title'] = 'Fonction';
+  $langStrings['en_US']['job_title'] = 'Job Title';
 
   $langStrings['nl_NL']['organization'] = 'Organisatie';
   $langStrings['fr_FR']['organization'] = 'Organisation';

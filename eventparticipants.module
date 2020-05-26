@@ -35,9 +35,10 @@ function eventparticipants_page() {
 
   // set the title of the page (= event title)
   drupal_set_title($event['title']);
+  $html = '<h2>' . $langString['participant_list'] . '</h2>';
 
   // show privacy notice
-  $html = '<p>' . $langString['privacy_notice'] . '</p>';
+  $html .= '<p>' . $langString['privacy_notice'] . '</p>';
 
   // show participants
   $dao = eventparticipants_getEventParticipants($eventID);
@@ -105,6 +106,10 @@ function eventparticipants_getStrings() {
   }
 
   $langStrings = [];
+
+  $langStrings['nl_NL']['participant_list'] = 'Deelnemerslijst';
+  $langStrings['fr_FR']['participant_list'] = 'Liste des participants';
+  $langStrings['en_US']['participant_list'] = 'Participant List ';
 
   $langStrings['nl_NL']['privacy_notice'] = 'Omwille van de privacy tonen we enkel de initialen van de deelnemers.';
   $langStrings['fr_FR']['privacy_notice'] = 'Pour des raisons de confidentialité, nous n\'affichons que les initiales des participants.';

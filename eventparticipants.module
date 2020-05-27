@@ -114,9 +114,9 @@ function eventparticipants_getStrings() {
   $langStrings['fr_FR']['participant_list'] = 'Liste des inscrits';
   $langStrings['en_US']['participant_list'] = 'Registrations';
 
-  $langStrings['nl_NL']['privacy_notice'] = 'Omwille van de privacy tonen we enkel de initialen van de deelnemers.';
-  $langStrings['fr_FR']['privacy_notice'] = 'Pour des raisons de confidentialité, nous n\'affichons que les initiales des participants.';
-  $langStrings['en_US']['privacy_notice'] = 'For privacy reasons, we only show the initials of the participants.';
+  $langStrings['nl_NL']['privacy_notice'] = 'Omwille van de privacy tonen we enkel de initialen van de ingeschreven personen.';
+  $langStrings['fr_FR']['privacy_notice'] = 'Pour des raisons de confidentialité, nous n\'affichons que les initiales des inscrits.';
+  $langStrings['en_US']['privacy_notice'] = 'For privacy reasons, we only show the initials of the registrants.';
 
   $langStrings['nl_NL']['no_event'] = 'De inschrijvingslijst is niet beschikbaar.';
   $langStrings['fr_FR']['no_event'] = 'La liste des inscrits n\'est pas disponible.';
